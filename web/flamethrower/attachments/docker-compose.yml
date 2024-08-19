@@ -1,0 +1,17 @@
+version: "3.8"
+name: "srcdoc-memos"
+
+services:
+  web:
+    build: web
+    ports:
+      - "1337:1337"
+    restart: always
+
+  bot:
+    build: bot
+    environment:
+      SITE: http://localhost:1337  # this will point to the public instance on remote
+      PORT: 3000
+    ports:
+      - "3000:3000"

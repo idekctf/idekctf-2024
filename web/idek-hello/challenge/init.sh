@@ -1,0 +1,1 @@
+mkdir -p /var/log/nginx && service php8.2-fpm start && nginx -g "daemon off;"

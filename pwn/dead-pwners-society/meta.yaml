@@ -1,0 +1,15 @@
+name: Dead Pwners Society
+author: Kaligula, Shunt
+public: true
+attachments:
+  - dead-pwners-society.tar.gz
+flag: idek{CF1_4iN7_tH47_1NvInC1B13_4fT37_A1L_H3h}
+description: |-
+  What secrets will you find in this library?
+  User creds are reader:reader
+
+
+  The flag is in /dev/sdb
+
+
+  Hint: The note for a book is missing, could it be a problem?

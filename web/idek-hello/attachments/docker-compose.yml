@@ -1,0 +1,5 @@
+services:
+  hello:
+    build: hello
+    ports:
+      - 1337:80

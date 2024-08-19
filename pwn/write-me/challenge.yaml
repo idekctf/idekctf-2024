@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: write-me
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/write-me-healthcheck:837c215cf9dd7abf3b86720f8793fe2b0ab6ac08de181fb3aa4ba5ecb006bb4a
+  image: us.gcr.io/idekctf-374221/write-me-challenge:92653d4a91d29312db5cb7de1dfbbbf2a6d87ad99c26d654ed283eb001121fc4

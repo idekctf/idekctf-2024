@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "modid",
+	"version": "${version}",
+	"name": "idekCTF 2024",
+	"description": "Go find me!",
+	"authors": [
+		"JoshL"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/modid/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.challenge.Challenge"
+		]
+	},
+	"mixins": [
+		"modid.mixins.json",
+		{
+			"config": "modid.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.10",
+		"minecraft": "~1.19.2",
+		"java": ">=17",
+		"fabric-api": "*",
+		"carpet": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

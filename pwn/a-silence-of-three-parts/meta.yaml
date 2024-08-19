@@ -1,0 +1,9 @@
+name: a silence of three parts
+author: unvariant
+public: true
+flag: idek{random_flag_because_im_writing_the_chal_1_day_before_the_ctf}
+description: |-
+  I love leakless heap exploitation!!!
+
+  NOTE: the intended solution requires no more than 8 bits of brute force.
+  HINT: what useful fields can you reach in `main_arena` without brute force?

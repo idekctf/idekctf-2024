@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h1>Submissions</h1>
+<div class="flex-desktop">
+    <div style="flex: 3; overflow-x: auto;">
+        <table class="table table-hover table-full-width">
+            <thead class="table-dark">
+                <tr>
+                    <th scope="col">Problem ID</th>
+                    <th scope="col">User</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in submissions %}
+                <tr>
+                    <td>{{ row.problem_id }}</td>
+                    <td>{{ row.user.username }}</td>
+                    <td><a href="/submission/{{ row.id }}">{{ row.status }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: flamethrower
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/flamethrower-healthcheck:bc9763b88408c93ae5e5e8299a9f341383b74d1529dfe78a32cbb482e133a21f
+  image: us.gcr.io/idekctf-374221/flamethrower-challenge:1d2c7e74c3708116a97969d7e9989423b78fe5fa511cbf029c76c550a2fdf3e6

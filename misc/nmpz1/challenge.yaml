@@ -1,0 +1,13 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: nmpz
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: false
+  image: us.gcr.io/idekctf-374221/nmpz-challenge:06aed3cffbfa78f78440544a3c3126751312b8054dbb7310b2b6d52f2444a136

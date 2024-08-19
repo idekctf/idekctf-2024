@@ -1,0 +1,29 @@
+{% import '_helpers.jinja' as helpers with context %}
+{% if container.expose %}
+{% set httpPorts = container.expose|selectattr("http", "defined")|list %}
+{% if httpPorts | first is defined %}
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  namespace: {{ namespace }}
+  name: {{ container.name }}
+  labels:
+    {{ helpers.common_labels() | indent(4) }}
+    {{ helpers.container_labels() | indent(4) }}
+  {% if options.annotations and options.annotations.ingress %}
+  annotations:
+    {{ options.annotations.ingress | yaml(4) }}
+  {% endif %}
+spec:
+  rules:
+  {% for httpPort in httpPorts %}
+    - host: {{ httpPort.http }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ container.name }}
+              servicePort: {{ httpPort.target }}
+  {% endfor %}
+{% endif %}
+{% endif %}

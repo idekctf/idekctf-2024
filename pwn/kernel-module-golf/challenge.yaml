@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: kernel-module-golf
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/kernel-module-golf-healthcheck:d2c2a88776ca170bc53f6f1318475fd80dd03734f2a40cbe1292bf412ed3292a
+  image: us.gcr.io/idekctf-374221/kernel-module-golf-challenge:1b5df67c648b09ebc9cf5d33bf35a4650457a6136165f3baee9c5325ac13ac86

@@ -1,0 +1,15 @@
+{
+  "name": "srcdoc-memos-revenge",
+  "version": "1.0.0",
+  "description": "why",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "icesfont",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.6.0",
+    "puppeteer": "^23.1.0"
+  }
+}

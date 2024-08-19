@@ -1,0 +1,8 @@
+name: Welcome to idekCTF 2024!
+author: idek
+public: true
+flag: idek{our_hack_fortress_team_is_looking_for_mvm_players}
+description: Welcome to idekCTF 2024! Please join our [discord](https://discord.gg/c7w4gKMnAX) for any announcements and updates on challenges.
+min_points: 100
+max_points: 100
+tiebreakEligible: false

@@ -1,0 +1,248 @@
+{
+    "easy": {
+        "bonaparte_1784": {
+            "panoType": 1,
+            "pano": "2wSadUHayk_JIinvbil1Ng",
+            "lat": 48.8534247,
+            "lng": 2.3042575,
+            "maxZ": 5,
+            "flag": "1,1e3f2a0309b777b37b1bc12d01203339"
+        },
+        "beer_park": {
+            "panoType": 1,
+            "pano": "TDHfLwZYtry5r75FCIHcWA",
+            "lat": 36.1123698,
+            "lng": -115.1728652,
+            "maxZ": 5,
+            "flag": "2,ec72b5bdb83f858308142a0d3dde5714"
+        },
+        "mr_drains": {
+            "panoType": 1,
+            "pano": "iypf0xBG2MbWmuy7h6QiaQ",
+            "lat": -33.8666522,
+            "lng": 151.2028977,
+            "maxZ": 5,
+            "flag": "3,c82846bd8de1579487c290fe0ef30700"
+        },
+        "green_car": {
+            "panoType": 1,
+            "pano": "IAw2VCMCHsmweYnfMxKJjQ",
+            "lat": 40.4390519,
+            "lng": -3.4601965,
+            "maxZ": 5,
+            "flag": "4,399a088ff464a1a43ed3d6864c7f50b5"
+        },
+        "posuto_py": {
+            "panoType": 1,
+            "pano": "RozJmNLL7HgCGa_vV9-s1A",
+            "lat": 35.6593653,
+            "lng": 139.7450154,
+            "maxZ": 5,
+            "flag": "5,fc26a083d35cb9d6b474580017f8bdfa"
+        },
+        "icc": {
+            "panoType": 1,
+            "pano": "jFp3N4eYKJtzc9uq8U2h8Q",
+            "lat": 52.5053921,
+            "lng": 13.2797257,
+            "maxZ": 5,
+            "flag": "6,836c35892e7643f71668376d1716e44e"
+        },
+        "imax": {
+            "panoType": 1,
+            "pano": "YwyExJaqq3uwwSuJ2zdpaw",
+            "lat": 49.9895631,
+            "lng": 36.2898469,
+            "maxZ": 5,
+            "flag": "7,aef9cc02ac17e0a806c2204fceea74f1"
+        },
+        "all_eyes_on_us": {
+            "panoType": 1,
+            "pano": "keyrYZ_cQBlnWCFOmeI8Sw",
+            "lat": 43.2844195,
+            "lng": 28.044013,
+            "maxZ": 5,
+            "flag": "8,158686d31f2b18c862c765f95c336a0b"
+        },
+        "panasonic": {
+            "panoType": 1,
+            "pano": "_E8vPI7nw18RHak5wxr5Pg",
+            "lat": 35.1726753,
+            "lng": 136.9087553,
+            "maxZ": 5,
+            "flag": "9,a1e3b275a3e73cd964ffd840063204be"
+        },
+        "deja_vu": {
+            "panoType": 1,
+            "pano": "9wI_9VOflWioeBMs9lJhDw",
+            "lat": 59.4437878,
+            "lng": 24.7542068,
+            "maxZ": 5,
+            "flag": "10,201189c04aae837ab90f86c9d5747beb"
+        }
+    },
+    "medium": {
+        "soylent_green": {
+            "panoType": 1,
+            "pano": "KNJLaVy32PDBPmiD8XABtw",
+            "lat": 13.7681201,
+            "lng": 100.5383199,
+            "maxZ": 5,
+            "flag": "1,1755e5bcb85dc2786de932d826419f56"
+        },
+        "and_my_compass": {
+            "panoType": 1,
+            "pano": "8IvLpzfOrZjry7crmwagFA",
+            "lat": -43.9459837,
+            "lng": 170.1312052,
+            "maxZ": 5,
+            "flag": "2,0e8368ee81b0cadffa2d0199b17be81f"
+        },
+        "sea_adventure": {
+            "panoType": 1,
+            "pano": "SbmTAcVOBCziYtTzPY4cCw",
+            "lat": 35.9509172,
+            "lng": 14.4090519,
+            "maxZ": 5,
+            "flag": "3,5dd302f03e495b7a888a4b66686ccec0"
+        },
+        "beach_property": {
+            "panoType": 1,
+            "pano": "U9kS4QGHplKYLqb2wVfJGA",
+            "lat": -2.4987073,
+            "lng": -44.3105805,
+            "maxZ": 5,
+            "flag": "4,227b1b59720a42a04f2cff396f5a41a6"
+        },
+        "stairway_to_heaven": {
+            "panoType": 0,
+            "pano": "AF1QipNrWYtD1ERr9XLZnpajh5FNeVWcZsXWQqw-T9XH",
+            "lat": 62.473828,
+            "lng": 6.1625806,
+            "maxZ": 5,
+            "flag": "5,bcc9a94dd9b9026121dd4a7b5d106a87"
+        },
+        "a_circle": {
+            "panoType": 1,
+            "pano": "V12raiKfWz_ZEh-_PXmaxw",
+            "lat": 66.5449152,
+            "lng": 66.608741,
+            "maxZ": 5,
+            "flag": "6,b047238f02c1753e02473be44696319b"
+        },
+        "idek_islands": {
+            "panoType": 1,
+            "pano": "8plC3J9d65rzRI3EGcRZAw",
+            "lat": 18.3268429,
+            "lng": -64.7981491,
+            "maxZ": 5,
+            "flag": "7,483fccbc89f12386a3a45ea0d6045dcb"
+        },
+        "drunk_driving": {
+            "panoType": 1,
+            "pano": "TSDcSkIuD_784uC4Aw5pYg",
+            "lat": -2.54833,
+            "lng": 29.6949376,
+            "maxZ": 5,
+            "flag": "8,9a42dc243f89fd0a26952434b1936c1a"
+        },
+        "wrong_side": {
+            "panoType": 1,
+            "pano": "OMEyvQN8Bwo9tonMsC1VyQ",
+            "lat": 48.2426436,
+            "lng": 142.1555839,
+            "maxZ": 5,
+            "flag": "9,ae393b30851879cde2cadba74fc60783"
+        },
+        "pulled_over": {
+            "panoType": 1,
+            "pano": "YZjxh6sae0Y6a9xXl1q0Gg",
+            "lat": 6.3890545,
+            "lng": 9.3949149,
+            "maxZ": 5,
+            "flag": "10,6ad16986db46a887fede9e3e94a9254d"
+        }
+    },
+    "hard": {
+        "mountains_of_madness": {
+            "panoType": 1,
+            "pano": "1LWtQks03d3HhJYlcRBGGQ",
+            "lat": 69.2448574,
+            "lng": -53.547515,
+            "maxZ": 5,
+            "flag": "1,a3cf03503e6960efce9cc47c549c44de"
+        },
+        "venice": {
+            "panoType": 1,
+            "pano": "XHgJqv6n0pEVRrmYwBuhJw",
+            "lat": 1.2506765,
+            "lng": 103.8437618,
+            "maxZ": 5,
+            "flag": "2,857977152ed93e562fce93bc0885ebb0"
+        },
+        "happy_birthday": {
+            "panoType": 1,
+            "pano": "GEElBBRyRxrad4lWspoyBA",
+            "lat": 36.9751524,
+            "lng": 24.7453427,
+            "maxZ": 5,
+            "flag": "3,a86b799619f6c890f8492f5211d8f8f0"
+        },
+        "traffic_cone": {
+            "panoType": 1,
+            "pano": "qwTq0WCetNdbHmX9cjG7WQ",
+            "lat": 36.1159958,
+            "lng": -117.9711314,
+            "maxZ": 5,
+            "flag": "4,facb99ec9012a5ba1c6e2277797306fa"
+        },
+        "birb": {
+            "panoType": 1,
+            "pano": "fazS-b6URA3N338bk5khaw",
+            "lat": 32.9617504,
+            "lng": 130.7817242,
+            "maxZ": 5,
+            "flag": "5,f8bb679b3c33c0989da4bc0654f5a530"
+        },
+        "nostalgia_of_the_inf": {
+            "panoType": 0,
+            "pano": "AF1QipPTlRnzHFM6aNEF4gaiuqkW-nb8He7Qu2GTdl_c",
+            "lat": 43.4746073,
+            "lng": -80.5522835,
+            "maxZ": 4,
+            "flag": "6,897d0acd9182188c77e84ea835f1064b"
+        },
+        "at_a_crossroads": {
+            "panoType": 1,
+            "pano": "JGGocuhnrubSTvhlGp-XUw",
+            "lat": 58.3529767,
+            "lng": 11.9359197,
+            "maxZ": 5,
+            "flag": "7,b39b0ed694ddedfcfa44d40f23f27f6c"
+        },
+        "everyones_connected": {
+            "panoType": 1,
+            "pano": "RGVMoa7hnmfa02I8LPJRVQ",
+            "lat": 14.0951462,
+            "lng": 99.4179881,
+            "maxZ": 5,
+            "flag": "8,9b92c233e34a3a921951e01b94311496"
+        },
+        "rise_above": {
+            "panoType": 1,
+            "pano": "xyVAE9Y8bSHTZjBLZuaweQ",
+            "lat": 1.4253344,
+            "lng": 124.8387891,
+            "maxZ": 5,
+            "flag": "9,24c9e3ce65cb175b8f81350b14bc9558"
+        },
+        "butterfly": {
+            "panoType": 1,
+            "pano": "AO8FXPYIeVIMfJgFSfAN8Q",
+            "lat": 53.9701663,
+            "lng": 23.925585,
+            "maxZ": 5,
+            "flag": "10,09b66b723315f35d2c123b1e3a07eb55"
+        }
+    }
+}

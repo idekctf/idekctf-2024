@@ -1,0 +1,10 @@
+name: includeme
+author: downgrade
+public: true
+flag: idek{thank_you_genie_for_the_very_convenient_test_file_efde81}
+instancer: true
+description: |
+  another minimalist, frontend-less, challenge because i'm bad at writing server-side challenges
+  
+  
+  note: it takes ~5 minutes for an instance to start up, please test locally first :3

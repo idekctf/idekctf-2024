@@ -1,0 +1,8 @@
+{% import '_helpers.jinja' as helpers with context %}
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ namespace }}
+  labels:
+    name: {{ namespace }}
+    {{ helpers.common_labels() | indent(4) }}

@@ -1,0 +1,9 @@
+version: "3.8"
+name: "srcdoc-memos-revenge"
+
+services:
+  web:
+    build: web
+    ports:
+      - "1337:1337"
+    restart: always

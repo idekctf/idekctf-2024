@@ -1,0 +1,26 @@
+{% import '_helpers.jinja' as helpers with context %}
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  namespace: {{ namespace }}
+  name: network-policy-private
+  labels:
+    {{ helpers.common_labels() | indent(4) }}
+spec:
+  podSelector:
+    matchLabels:
+      {{ helpers.common_labels() | indent(6) }}
+      rcds.redpwn.net/visibility: private
+  policyTypes:
+    - Ingress
+    - Egress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              {{ helpers.common_labels() | indent(14) }}
+  egress:
+    - to:
+        - namespaceSelector:
+            matchLabels:
+              {{ helpers.common_labels() | indent(14) }}

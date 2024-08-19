@@ -1,0 +1,9 @@
+version: "3.8"
+name: "clyde-jail"
+
+services:
+  jail:
+    build: .
+    ports:
+      - "1337:1337"
+    restart: always

@@ -1,0 +1,14 @@
+{
+  "name": "srcdoc-memos",
+  "version": "1.0.0",
+  "description": "lol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "icesfont",
+  "license": "ISC",
+  "dependencies": {
+    "cookie": "^0.6.0"
+  }
+}

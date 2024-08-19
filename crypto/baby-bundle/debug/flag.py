@@ -1,0 +1,1 @@
+flag = b'idek{R34dy_f0r_m0r3?}'

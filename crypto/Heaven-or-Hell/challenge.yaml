@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: heaven-or-hell
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/heaven-or-hell-healthcheck:43385b359212a69207cda5e7d2f4ed7336c22841905a3add073dc29c17718205
+  image: us.gcr.io/idekctf-374221/heaven-or-hell-challenge:51746d19c08f367d629a1198372ea994a2d306b15ab445dc661874247a894858

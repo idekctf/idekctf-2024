@@ -1,0 +1,44 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: http://rcds.redpwn.com/schemas/backends/k8s/options.yaml
+type: object
+definitions:
+  annotation:
+    type: object
+    additionalProperties:
+      type: string
+properties:
+  kubeContext:
+    type: string
+    description: >-
+      The name of the context in the kubeconfig file to use. If unset, defaults
+      to current context in kubeconfig file.
+  namespaceTemplate:
+    type: string
+    description: >-
+      Template for the namespace to create for each challenge. Evaluated using
+      Jinja. The challenge's config is available under the variable `challenge`
+    default: "rcds-{{ challenge.id }}"
+  domain:
+    type: string
+    description: >-
+      Domain that the cluster is accessible at. NodePorts must be accessible on
+      this domain, and ingresses will be created on subdomains.
+  annotations:
+    type: object
+    description: >-
+      Annotations for Kubernetes objects that are created.
+    properties:
+      ingress:
+        $ref: "#/definitions/annotation"
+      service:
+        $ref: "#/definitions/annotation"
+  tolerations:
+    type: array
+    description: >-
+      Kubernetes tolerations applied to challenge pods.
+  affinity:
+    type: object
+    description: >-
+      Kubernetes affinities applied to challenge pods.
+required:
+  - domain

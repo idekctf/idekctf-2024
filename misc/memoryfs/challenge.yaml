@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: memoryfs
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/memoryfs-healthcheck:0edd0b576bd144f05ee29f1210ca8e86ee29dda58c18dae405cd3c0f750afb62
+  image: us.gcr.io/idekctf-374221/memoryfs-challenge:54c63207cf128e08777bacbd6e0a2a8f643f31b9c27ce816a98e267ad3e3a2e9

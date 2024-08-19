@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: srcdoc-memos
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/srcdoc-memos-healthcheck:c58ca4e99a29a9d5ba03411003d3d1b886d2ca3d5f3a84b0c3312de8c63d50d8
+  image: us.gcr.io/idekctf-374221/srcdoc-memos-challenge:ec4e6fd013f51929c369ed2d4d57fa0e809210664849d8c2606b0d5ab1ad6928

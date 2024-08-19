@@ -1,0 +1,73 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: http://rcds.redpwn.com/schemas/rcds.yaml
+type: object
+properties:
+  docker:
+    type: object
+    description: >-
+      Settings for the docker images that will be built for challenges.
+    properties:
+      image:
+        type: object
+        description: >-
+          Settings controlling the generation of tags for built docker images.
+        properties:
+          prefix:
+            type: string
+            description: >-
+              Prefix for the docker image. This is will be joined as a URL
+              component with the image name as determined by the template. This
+              would include the regsitry url if you are not planning to use
+              Docker Hub.
+            examples:
+            - redpwn
+            - quay.io/redpwn
+          template:
+            type: string
+            description: >-
+              Template for the name of the docker image.
+            default: "rcds-{{ challenge.id }}-{{ container.name }}"
+        required:
+        - prefix
+        - template
+    required:
+    - image
+  backends:
+    type: array
+    description: >-
+      Deployment backends to use. Backends earlier in the array have higher
+      precedence.
+    items:
+      type: object
+      properties:
+        resolve:
+          type: string
+          description: >-
+            The name of this backend (either the name of one of rCDS's internal
+            backends, or its fully qualified module name).
+        options:
+          type: object
+          description: >-
+            Options for this backend.
+          default: {}
+        required:
+        - resolve
+        - options
+    default: []
+  defaults:
+    type: object
+    description: >-
+      Default options for challenges. Values for array / mapping keys such as
+      `expose` and `containers` will be applied to each individual item within
+      that key (on the level where a concrete schema is defined).
+    not:
+      anyOf:
+        # Properties that are not allowed to have defaults
+      - required: ['id']
+  flagFormat:
+    type: string
+    description: >-
+      (Optional) regex to validate all flags against. Will be surrounded with `^$`.
+    format: regex
+required:
+- backends

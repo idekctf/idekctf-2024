@@ -1,0 +1,256 @@
+{
+    "all": {
+        "type": "nested",
+        "lists": [
+            "sponsor",
+            "p is a",
+            "p loves n",
+            "p is a a",
+            "red herring",
+            "vm red herrings"
+        ]
+    },
+    "vm red herrings": {
+        "type": "cartesian",
+        "lists": [
+            "vm",
+            "vm opcode"
+        ]
+    },
+    "vm": {
+        "type": "phrases",
+        "phrases": [
+            "vm",
+            ["virtual", "machine"],
+            "op",
+            "opcode"
+        ]
+    },
+    "vm opcode": {
+        "type": "phrases",
+        "phrases": [
+            "add",
+            "sub",
+            "mul",
+            "div",
+            "mod",
+            "call",
+            "ret",
+            ["read", "mem"],
+            ["write", "mem"],
+            "srand",
+            "rand",
+            "push",
+            "pop",
+            "fork",
+            "read",
+            "write",
+            "exit"
+        ]
+    },
+    "red herring": {
+        "type": "phrases",
+        "phrases": [
+            "win",
+            ["decrypt", "flag"],
+            ["probably", "about", "time", "to", "give", "up"],
+            "init",
+            ["check", "flag"],
+            "step1",
+            "step2",
+            "step3",
+            "step4",
+            "step5",
+            "step6",
+            ["just", "give", "up"],
+            "hash",
+            "xor",
+            "rc4_enc",
+            ["debugger", "check"],
+            ["check", "ptrace"],
+            "LoadLibraryA",
+            "GetProcAddress",
+            "IsDebuggerPresent",
+            "mainCRTStartup",
+            "TerminateProcess",
+            "RtlCaptureContext",
+            "RtlVirtualUnwind",
+            "GetCurrentProcess",
+            "SetUnhandledExceptionFilter",
+            "TerminateProcess",
+            "_CxxThrowException",
+            "__C_specific_handler",
+            "NtCreateThread",
+            "KiUserExceptionDispatcher",
+            "VirtualProtect",
+            "VirtualAlloc",
+            "VirtualFree",
+            "MiniDumpWriteDump"
+        ]
+    },
+    "p is a a": {
+        "type": "cartesian",
+        "lists": [
+            "noun people",
+            "is a",
+            "ctf category",
+            "noun modifier"
+        ]
+    },
+    "p loves n": {
+        "type": "cartesian",
+        "lists": [
+            "noun people",
+            "comparison",
+            "noun"
+        ]
+    },
+    "comparison": {
+        "type": "phrases",
+        "phrases": [
+            "loves",
+            ["secretly", "admires"],
+            "worships"
+        ]
+    },
+    "p is a": {
+        "type": "cartesian",
+        "lists": [
+            "noun people",
+            "is",
+            "adjective"
+        ]
+    },
+    "is": {
+        "type": "const",
+        "value": "is"
+    },
+    "loves": {
+        "type": "const",
+        "value": "loves"
+    },
+    "sponsor": {
+        "type": "cartesian",
+        "lists": [
+            "thank you",
+            "sponsor name",
+            "for sponsoring idekCTF 2024"
+        ]
+    },
+    "thank you": {
+        "type": "phrases",
+        "phrases": [
+            ["thank", "you"],
+            ["special", "thanks", "to"]
+        ]
+    },
+    "sponsor name": {
+        "type": "phrases",
+        "phrases": [
+            "zellic",
+            ["google", "cloud"],
+            ["security", "innovation"],
+            ["trend", "micro"],
+            ["hack", "the", "box"],
+            ["ottersec"]
+        ]
+    },
+    "for sponsoring idekCTF 2024": {
+        "type": "phrases",
+        "phrases": [
+            ["for", "sponsoring", "idekCTF", "2024"]
+        ]
+    },
+    "adjective": {
+      "type": "phrases",
+      "phrases": [
+        "orz",
+        "bald",
+        ["all", "in"],
+        ["cute", "fr"],
+        "funny",
+        "malding"
+      ]
+    },
+    "noun": {
+        "type": "nested",
+        "lists": [
+            "noun people",
+            "noun thing",
+            "sponsor name"
+        ]
+    },
+    "ctf category": {
+        "type": "phrases",
+        "phrases": [
+            "web",
+            "rev",
+            "crypto",
+            "misc",
+            "pwn",
+            "guess",
+            "osint",
+            "blockchain"
+        ]
+    },
+    "is a": {
+        "type": "phrases",
+        "phrases": [
+            ["is", "a"],
+            "the",
+            ["is", "not", "a"]
+        ]
+    },
+    "noun modifier": {
+        "type": "phrases",
+        "phrases": [
+            "god",
+            "main"
+        ]
+    },
+    "noun thing": {
+        "type": "phrases",
+        "phrases": [
+            ["uk", "eurovision"],
+            ["to", "procrastinate"],
+            ["format", "strings"],
+            "blockchain",
+            "LLL",
+            "LCG",
+            "solana",
+            "idek"
+        ]
+    },
+    "noun people": {
+      "type": "phrases",
+      "phrases": [
+        "eggroll",
+        "unvariant",
+        ["playoff", "rondo"],
+        "icesfont",
+        "downgrade",
+        ["thy", "isnis"],
+        "mixy",
+        "jazzzooo",
+        "fran",
+        "AZ",
+        "sky",
+        "trixter",
+        "joshl",
+        "eth007",
+        "genni",
+        "shunt",
+        "bquanman",
+        "cefu",
+        "ch0p",
+        "contron",
+        "kaligula",
+        "zerotistic",
+        "elvis",
+        "JW",
+        ["Abdelhameed", "Ghazy"],
+        "giapppp",
+        "mistsu"
+      ]
+    }
+  }

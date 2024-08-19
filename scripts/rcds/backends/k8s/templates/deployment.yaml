@@ -1,0 +1,51 @@
+{% import '_helpers.jinja' as helpers with context %}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: {{ namespace }}
+  name: {{ container.name }}
+  labels:
+    {{ helpers.common_labels() | indent(4) }}
+    {{ helpers.container_labels() | indent(4) }}
+spec:
+  replicas: {{ container.config.replicas }}
+  selector:
+    matchLabels:
+      {{ helpers.common_labels() | indent(6) }}
+      {{ helpers.container_labels() | indent(6) }}
+  template:
+    metadata:
+      labels:
+        {{ helpers.common_labels() | indent(8) }}
+        {{ helpers.container_labels() | indent(8) }}
+    spec:
+      containers:
+        - name: {{ container.name }}
+          image: {{ container.config.image }}
+          {% if container.config.ports %}
+          ports:
+          {% for port in container.config.ports %}
+            - containerPort: {{ port }}
+              name: port-{{ port }}
+          {% endfor %}
+          {% endif %}
+          {% if container.config.environment %}
+          env:
+          {% for name, value in container.config.environment.items() %}
+            - name: {{ name }}
+              value: {{ value | quote }}
+          {% endfor %}
+          {% endif %}
+          {% if container.config.resources %}
+          resources:
+            {{ container.config.resources | yaml(12) }}
+          {% endif %}
+      automountServiceAccountToken: false
+      {% if options.tolerations %}
+      tolerations:
+        {{ options.tolerations | yaml(8) }}
+      {% endif %}
+      {% if options.affinity %}
+      affinity:
+        {{ options.affinity | yaml(8) }}
+      {% endif %}

@@ -1,0 +1,28 @@
+apiVersion: "klodd.tjcsec.club/v1"
+kind: Challenge
+metadata:
+  name: smarty-challenge
+spec:
+  name: Untitled Smarty Challenge
+  timeout: 1800000 # 30min
+  pods:
+    - name: app
+      egress: true
+      ports:
+        - port: 1337
+      spec:
+        containers:
+          - name: main
+            image: gcr.io/idekctf-374221/untitled-smarty-challenge
+            resources:
+              requests:
+                memory: 100Mi
+                cpu: 75m
+              limits:
+                memory: 250Mi
+                cpu: 100m
+        automountServiceAccountToken: false
+  expose:
+    kind: http
+    pod: app
+    port: 1337

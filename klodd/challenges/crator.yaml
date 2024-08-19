@@ -1,0 +1,28 @@
+apiVersion: "klodd.tjcsec.club/v1"
+kind: Challenge
+metadata:
+  name: crator
+spec:
+  name: crator
+  timeout: 600000 # 10min
+  pods:
+    - name: app
+      egress: true
+      ports:
+        - port: 1337
+      spec:
+        containers:
+          - name: main
+            image: gcr.io/idekctf-374221/crator
+            resources:
+              requests:
+                memory: 200Mi
+                cpu: 200m
+              limits:
+                memory: 500Mi
+                cpu: 500m
+        automountServiceAccountToken: false
+  expose:
+    kind: http
+    pod: app
+    port: 1337

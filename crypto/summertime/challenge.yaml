@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: summertime
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/summertime-healthcheck:8923109f3fdbe3d534dfc9b7632198b2da55ad420b01ad1939d15d23827a67b4
+  image: us.gcr.io/idekctf-374221/summertime-challenge:680b4831d4627bd43d9e6adcc60936dae6d2573f8830b17c93090d8040c88179

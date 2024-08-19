@@ -1,0 +1,14 @@
+name: flamethrower
+author: downgrade & icesfont
+public: true
+flag: idek{sorry_for_my_ugly_frontend_but_i_hope_the_challenge_was_still_fun_c02b7d}
+description: |
+  I added this cool project called [flamethrower](https://github.com/fireship-io/flamethrower) to my product site, hopefully it doesn't have any silly bugs
+
+  Hints:
+
+
+  * what if one route could render different pages?
+  * there's no funny javascript quirks in posts.js (that we know of)
+admin_bot: true
+http: true

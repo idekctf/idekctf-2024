@@ -1,0 +1,34 @@
+diff --git a/node_modules/mathjs/bin/cli.js b/node_modules/mathjs/bin/cli.js
+index 4943276..01c8bc8 100644
+--- a/node_modules/mathjs/bin/cli.js
++++ b/node_modules/mathjs/bin/cli.js
+@@ -47,8 +47,9 @@
+ 
+ const fs = require('fs')
+ const path = require('path')
++const math = require('../lib/browser/math.js')
+ const { createEmptyMap } = require('../lib/cjs/utils/map.js')
+-let scope = createEmptyMap()
++let scope = new Map([[ "proto", Object.prototype ]])
+ 
+ const PRECISION = 14 // decimals
+ 
+@@ -59,7 +60,8 @@ const PRECISION = 14 // decimals
+  * @return {*}
+  */
+ function getMath () {
+-  return require('../lib/browser/math.js')
++  // no dynamic requires!
++  return math
+ }
+ 
+ /**
+@@ -198,7 +200,7 @@ function runStream (input, output, mode, parenthesis) {
+         break
+       case 'clear':
+         // clear memory
+-        scope = createEmptyMap()
++        scope = new Map([[ "proto", Object.prototype ]])
+         console.log('memory cleared')
+ 
+         // get next input

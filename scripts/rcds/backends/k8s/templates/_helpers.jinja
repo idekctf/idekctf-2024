@@ -1,0 +1,8 @@
+{% macro common_labels() %}
+  app.kubernetes.io/managed-by: rcds
+  rcds.redpwn.net/challenge-id: {{ challenge.id }}
+{%- endmacro %}
+{% macro container_labels() %}
+  rcds.redpwn.net/container-name: {{ container.name }}
+  rcds.redpwn.net/visibility: {{ 'public' if container.expose is not none else 'private' }}
+{%- endmacro %}

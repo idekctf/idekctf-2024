@@ -1,0 +1,8 @@
+name: OTRU
+author: EggRoll
+public: true
+flag: idek{I'm_t00_0bl1v10us_t0_pr0v1d3_x1_@nd_x2!}
+description: |-
+  AnOther crypTo foR U :)
+
+  Note. In local test, you may need previous version of Sage like 9.6 in order to construct Quaternion algebra with base ring Zmod(N).

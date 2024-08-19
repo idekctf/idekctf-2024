@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: dead-pwners-society
+spec:
+  deployed: true
+  powDifficultySeconds: 20
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: false
+    image: us.gcr.io/idekctf-374221/dead-pwners-society-healthcheck:b45e1bf2ef2214ad8de2044d24973a52a017805addc9489dd9121a20970809c2
+  image: us.gcr.io/idekctf-374221/dead-pwners-society-challenge:8260c8d599b0f695f6d9397e16a60f87e71c62949b8a5779085d5f898ab0f7ab

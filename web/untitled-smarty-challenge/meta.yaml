@@ -1,0 +1,7 @@
+name: untitled-smarty-challenge
+author: downgrade
+public: true
+flag: idek{trixter_got_a_cve_while_playtesting_this_challenge_9268d0}
+description: We're using Smarty 5, with open&#x5F;basedir, AND don't even pass user input directly into a template, surely this isn't insecure. Oh wait...
+instancer: true
+instancer_id: smarty-challenge

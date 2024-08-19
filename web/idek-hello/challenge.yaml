@@ -1,0 +1,45 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: idek-hello
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  podTemplate:
+    template:
+      spec:
+        containers:
+          - name: challenge # This is probably not the right way to do this
+            volumeMounts:
+              - name: cache
+                mountPath: /var/cache/nginx
+              - name: log
+                mountPath: /var/log
+              - name: lib
+                mountPath: /var/lib/nginx
+              - name: run
+                mountPath: /run
+              - name: php
+                mountPath: /var/run/php
+              - name: tmp
+                mountPath: /tmp
+        volumes:
+          - name: cache
+            emptyDir: {}
+          - name: log
+            emptyDir: {}
+          - name: lib
+            emptyDir: {}
+          - name: run
+            emptyDir: {}
+          - name: php
+            emptyDir: {}
+          - name: tmp
+            emptyDir: {}
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/idek-hello-healthcheck:2745aa83a18ee2bf3c56f96aee6fff230d60559245ed05dace8c2a9e47870e23
+  image: us.gcr.io/idekctf-374221/idek-hello-challenge:c2f331376fee9473feac187d36f155cf1e5182e7ebae5b189d4cc4d9ced48615

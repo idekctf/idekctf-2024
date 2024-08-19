@@ -1,0 +1,10 @@
+healthcheck/rootfs/
+challenge/rootfs/
+attachments/module/*.cmd
+attachments/module/*.json
+attachments/module/*.mod*
+attachments/module/*.o
+attachments/module/*.order
+attachments/module/*.symvers
+attachments/module/.clang-format
+attachments/linux

@@ -1,0 +1,28 @@
+apiVersion: "klodd.tjcsec.club/v1"
+kind: Challenge
+metadata:
+  name: includeme
+spec:
+  name: includeme
+  timeout: 900000 # 15min
+  pods:
+    - name: app
+      egress: true
+      ports:
+        - port: 1337
+      spec:
+        containers:
+          - name: main
+            image: gcr.io/idekctf-374221/includeme
+            resources:
+              requests:
+                memory: 500Mi
+                cpu: 500m
+              limits:
+                memory: 2000Mi
+                cpu: 4000m # wtf downgrade
+        automountServiceAccountToken: false
+  expose:
+    kind: http
+    pod: app
+    port: 1337

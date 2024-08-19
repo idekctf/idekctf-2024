@@ -1,0 +1,4 @@
+rev/nlibs/attachments/nlibs.tar.gz filter=lfs diff=lfs merge=lfs -text
+rev/nlibs-baby/attachments/baby.tar.gz filter=lfs diff=lfs merge=lfs -text
+misc/nmpz1/challenge/public/img.tar.gz filter=lfs diff=lfs merge=lfs -text
+misc/minecraft-hacked/challenge/idek.tar.gz filter=lfs diff=lfs merge=lfs -text

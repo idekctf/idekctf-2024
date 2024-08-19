@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: clyde-jail
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/clyde-jail-healthcheck:aabbdf216f57c495107b44951f6924b10119b763c46bb35eb71259765be9b0dc
+  image: us.gcr.io/idekctf-374221/clyde-jail-challenge:6a43fccf581b932e1b40fac9492a8bb9793cdcc4b75a0ec92b85d41e0114e629

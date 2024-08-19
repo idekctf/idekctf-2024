@@ -1,0 +1,31 @@
+$schema: http://json-schema.org/draft-07/schema#
+$id: http://rcds.redpwn.com/schemas/backends/rctf/options.yaml
+type: object
+properties:
+  url:
+    type: string
+  token:
+    type: string
+  scoring:
+    type: object
+    properties:
+      minPoints:
+        type: integer
+        description: >-
+          Minimum points for dynamically-scored challenges
+        default: 100
+      maxPoints:
+        type: integer
+        description: >-
+          Maximum points for dynamically-scored challenges
+        default: 500
+    required: ['minPoints', 'maxPoints']
+    default: {}
+  sortOrder:
+    type: array
+    description: >-
+      List of challenge IDs - their sortWeights will be set in this order
+    items:
+      type: string
+required: ['url', 'token', 'scoring']
+default: {}

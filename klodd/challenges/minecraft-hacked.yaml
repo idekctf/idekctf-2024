@@ -1,0 +1,28 @@
+apiVersion: "klodd.tjcsec.club/v1"
+kind: Challenge
+metadata:
+  name: minecraft-hacked
+spec:
+  name: Minecraft Hacked
+  timeout: 1800000 # 30min
+  pods:
+    - name: app
+      egress: true
+      ports:
+        - port: 1337
+      spec:
+        containers:
+          - name: main
+            image: gcr.io/idekctf-374221/mincraft-hacked
+            resources:
+              requests:
+                memory: 1536M
+                cpu: 1000m
+              limits:
+                memory: 4096M
+                cpu: 1500m
+        automountServiceAccountToken: false
+  expose:
+    kind: tcp
+    pod: app
+    port: 1337

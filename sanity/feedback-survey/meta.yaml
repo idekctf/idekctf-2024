@@ -1,0 +1,11 @@
+name: Feedback survey
+author: idek
+public: true
+flag: idek{next_year_will_be_idek_2025...We_promise!}
+description: |
+  Thank you for participating in idekCTF, please let us know how we did!
+  
+  [Survey](https://forms.gle/qk9k76bHzLcayr3g7)
+min_points: 100
+max_points: 100
+tiebreakEligible: false

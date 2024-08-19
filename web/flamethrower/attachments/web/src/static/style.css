@@ -1,0 +1,19 @@
+body {
+   background-color: #262626;
+   color: #cc2f00;
+   text-align: center;
+   margin-right: 20%;
+   margin-left: 20%;
+}
+
+ul {
+   padding-left: 0;
+}
+
+ul li {
+   list-style-position: inside;
+}
+
+a {
+   color: red;
+}

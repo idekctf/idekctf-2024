@@ -1,0 +1,2 @@
+root.img filter=lfs diff=lfs merge=lfs -text
+dead-pwners-society.tar.gz filter=lfs diff=lfs merge=lfs -text

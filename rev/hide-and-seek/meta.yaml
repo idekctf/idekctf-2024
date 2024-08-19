@@ -1,0 +1,9 @@
+name: Hide n Seek
+author: Elvis
+public: true
+flag: idek{id3K_WHEr3_IS_ThE_Fl4g}
+description: |-
+  Do you want to play a game? I want to play a game. Let's play hide n seek. The rule is simple: Find the correct password. (Sorry for string idekCTF 2023. This was supposed to be an idekCTF 2023 challenge, but it never happened)
+
+
+  Hint: There is a dll loaded somewhere. Find it

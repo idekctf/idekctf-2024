@@ -1,0 +1,6 @@
+[submodule "crypto/tensor-galore/challenge/vector-bundles-sagemath"]
+	path = crypto/tensor-galore/challenge/vector-bundles-sagemath
+	url = https://git.disroot.org/montessiel/vector-bundles-sagemath.git
+[submodule "crypto/tensor-galore/healthcheck/vector-bundles-sagemath"]
+	path = crypto/tensor-galore/healthcheck/vector-bundles-sagemath
+	url = https://git.disroot.org/montessiel/vector-bundles-sagemath.git

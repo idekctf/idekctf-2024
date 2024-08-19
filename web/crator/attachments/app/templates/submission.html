@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h1>Submission to {{ submission.problem.title }}</h1>
+<h3>Status: {{ submission.status }}</h3>
+<code><pre>{{ submission.code }}</pre></code>
+<h3>Test Cases:</h3>
+<div>
+    <table class="table table-hover table-full-width">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Test ID</th>
+                <th scope="col">Expected Output</th>
+                <th scope="col">Your Output</th>
+                <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in testcases %}
+            <tr>
+                <td>{{ row.testcase_id }}</td>
+                <td>{% if row.expected_output %}<pre>{{ row.expected_output }}</pre>{% else %}(Output Hidden){% endif %}</td>
+                <td>{% if row.expected_output %}<pre>{{ row.actual_output }}</pre>{% else %}(Output Hidden){% endif %}</td>
+                <td>{{ row.status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

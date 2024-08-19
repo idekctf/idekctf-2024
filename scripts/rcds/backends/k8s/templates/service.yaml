@@ -1,0 +1,30 @@
+{% import '_helpers.jinja' as helpers with context %}
+{% if container.config.ports %}
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: {{ namespace }}
+  name: {{ container.name }}
+  labels:
+    {{ helpers.common_labels() | indent(4) }}
+    {{ helpers.container_labels() | indent(4) }}
+  {% if options.annotations and options.annotations.service %}
+  annotations:
+    {{ options.annotations.service | yaml(4) }}
+  {% endif %}
+spec:
+  type: {{ 'NodePort' if container.expose is not none and container.expose|selectattr("tcp", "defined")|first is defined else 'ClusterIP' }}
+  selector:
+    {{ helpers.common_labels() | indent(4) }}
+    {{ helpers.container_labels() | indent(4) }}
+  ports:
+  {% for port in container.config.ports %}
+    - port: {{ port }}
+      targetPort: {{ port }}
+      name: port-{{ port }}
+    {% set exposedPort = container.expose|selectattr("target", "eq", port)|first %}
+    {% if exposedPort and exposedPort.tcp %}
+      nodePort: {{ exposedPort.tcp }}
+    {% endif %}
+  {% endfor %}
+{% endif %}

@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: tensor-galore
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/tensor-galore-healthcheck:4cac16bd854e9aca3db51e27eb0fc6839920f7e752f434af42dfc28c99b71e96
+  image: us.gcr.io/idekctf-374221/tensor-galore-challenge:35b9b25a67bdc191279630bfb54fd0e62f90a4b4e616fb23755423d4b17667f0

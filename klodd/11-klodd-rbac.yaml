@@ -1,0 +1,23 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: klodd
+rules:
+  - apiGroups: [""]
+    resources: [namespaces]
+    verbs: [list, get, create, delete]
+  - apiGroups: [""]
+    resources: [services]
+    verbs: [create, delete]
+  - apiGroups: [apps]
+    resources: [deployments]
+    verbs: [get, create, delete]
+  - apiGroups: [networking.k8s.io]
+    resources: [networkpolicies]
+    verbs: [create, delete]
+  - apiGroups: [traefik.containo.us]
+    resources: [ingressroutes, ingressroutetcps, middlewares, middlewaretcps]
+    verbs: [create, delete]
+  - apiGroups: [klodd.tjcsec.club]
+    resources: [challenges]
+    verbs: [list, get, watch]

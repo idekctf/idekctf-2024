@@ -1,0 +1,13 @@
+name: kernel module golf
+author: unvariant
+public: true
+flag: idek{kernel_module_golf_is_fun}
+description: |-
+  kernel + elf golfing.
+
+  [https://tmpout.sh/3/19.html](https://tmpout.sh/3/19.html)
+
+
+  Note: There's a $50 USD author bounty on this challenge first blood.
+
+  HINT: You should look more closely at kernel relocations, and it is possible to make a kernel module in 345 bytes.

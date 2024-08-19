@@ -1,0 +1,176 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: traefik-ingress-controller
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: traefik-ingress-controller
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - services
+      - endpoints
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - extensions
+      - networking.k8s.io
+    resources:
+      - ingresses
+      - ingressclasses
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - extensions
+      - networking.k8s.io
+    resources:
+      - ingresses/status
+    verbs:
+      - update
+  - apiGroups:
+      - traefik.containo.us
+    resources:
+      - middlewares
+      - middlewaretcps
+      - ingressroutes
+      - traefikservices
+      - ingressroutetcps
+      - ingressrouteudps
+      - tlsoptions
+      - tlsstores
+      - serverstransports
+    verbs:
+      - get
+      - list
+      - watch
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: traefik-ingress-controller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: traefik-ingress-controller
+subjects:
+  - kind: ServiceAccount
+    name: traefik-ingress-controller
+    namespace: default
+
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: traefik-conf
+data:
+  traefik.toml: |
+    [entryPoints]
+      [entryPoints.web]
+        address = ":80"
+        [entryPoints.web.http.redirections]
+          [entryPoints.web.http.redirections.entrypoint]
+            to = "websecure"
+            scheme = "https"
+            priority = 99 # we want to always redirect
+      [entryPoints.websecure]
+        address = ":443"
+        [entryPoints.websecure.http.tls]
+      [entryPoints.tcp]
+        address = ":1337"
+    [providers]
+      [providers.file]
+        directory = "/config"
+      [providers.kubernetesIngress]
+      [providers.kubernetesCRD]
+    [api]
+      insecure = true
+      dashboard = true
+    [log]
+      level = "INFO"
+  certificates.toml: |
+    [[tls.certificates]]
+      certFile = "/config/fullchain.pem"
+      keyFile = "/config/privkey.pem"
+      stores = ["default"]
+  # Ideally, the certs should be as secrets, but I'm also lazy
+  fullchain.pem: |
+    HAHA
+  privkey.pem: |
+    XD
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: traefik-deployment
+  labels:
+    app: traefik
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traefik
+  template:
+    metadata:
+      labels:
+        app: traefik
+    spec:
+      serviceAccountName: traefik-ingress-controller
+      terminationGracePeriodSeconds: 60
+      containers:
+        - name: traefik
+          image: traefik:v2.9
+          args:
+            - --configFile=/config/traefik.toml
+          ports:
+            - name: http
+              containerPort: 80
+            - name: https
+              containerPort: 443
+            - name: tcp
+              containerPort: 1337
+          resources: # not sure if required by GKE?
+            requests:
+              memory: 256Mi
+              cpu: 100m
+            limits:
+              memory: 512Mi
+              cpu: 250m
+          volumeMounts:
+          - mountPath: "/config"
+            name: "config"
+      volumes:
+      - name: config
+        configMap:
+          name: traefik-conf
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traefik-web
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 35.236.241.54 # gcloud compute addresses describe klodd-ip --region us-east4
+  ports:
+    - name: http
+      targetPort: http
+      port: 80
+    - name: https
+      targetPort: https
+      port: 443
+    - name: tcp
+      targetPort: tcp
+      port: 1337
+  selector:
+    app: traefik

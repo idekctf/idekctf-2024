@@ -1,0 +1,7 @@
+services:
+  minecraft:
+    build: .
+    ports:
+      - "1337:1337"
+    environment:
+      - FLAG=idekCTF{placeholder}

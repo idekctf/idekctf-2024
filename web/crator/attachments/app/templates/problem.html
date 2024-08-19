@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block main %}
+<h1>{{ problem.title }}</h1>
+<div>
+    <div style="padding: 4px; word-break: break-word; min-width: 0px;">
+        <div id="problem-description">{{ problem.description | safe }}</div>
+    </div>
+    <div style="padding: 4px;">
+        <a class="btn btn-primary" href="/submit/{{ problem.id }}">Submit</a>
+        <div>
+            <b>Difficulty:</b> {{ problem.difficulty }}<br>
+            <b>Time Limit:</b> 1s<br>
+            <b>Memory Limit:</b> ???
+        </div>
+    </div>
+</div>
+{% endblock %}

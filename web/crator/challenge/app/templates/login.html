@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<h1 class="text-center">Log In</h1>
+{{ message }}
+<form method="post">
+    <div class="form-floating">
+        <input autofocus
+               class="form-control mb-3"
+               name="username"
+               id="username"
+               placeholder="Username"
+               required>
+        <label for="username">Username</label>
+    </div>
+    <div class="form-floating">
+        <input class="form-control mb-3"
+               name="password"
+               id="password"
+               placeholder="Password"
+               type="password"
+               required>
+        <label for="password">Password</label>
+    </div>
+    <button class="btn btn-primary" type="submit">Log In</button>
+</form>
+{% endblock %}

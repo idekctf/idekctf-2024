@@ -1,0 +1,6 @@
+name: Write me
+author: JoshL
+public: true
+flag: idek{vfprintf_is_the_new_printf_and_I_love_that}
+description: |-
+  We all know the format string %n writes to data memory. Cool! Now do that 16 times. Without control of the arguments. In a single printf call??? wtf?

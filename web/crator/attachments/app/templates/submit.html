@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block main %}
+<h1 style="padding-top: 16px">Submit to {{ problem.title }}</h1>
+<div>
+    Language:
+    <select id="language" class="form-select">
+        <option value="golfscript" disabled>GolfScript (you wish)</option>
+        <option value="brainf" disabled>Brainf*** (maybe in another universe)</option>
+        <option value="rust" disabled>Iron (III) oxide (i still have to iron out some kinks)</option>
+        <option value="python" selected>Python 3</option>
+    </select>
+<div style="position: relative; height: calc(100vh - 400px);">
+    <div id="editor" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0;"># import math # jk, you can't import
+
+def add(a, b):
+    return a + b
+a, b = map(int, input().split())
+print(add(a, b))</div>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.35.4/ace.js" type="text/javascript" charset="utf-8"></script>
+</div>
+<div>
+    <div style="padding: 4px;">
+        <div>
+            <b>Difficulty:</b> {{ problem.difficulty }}<br>
+            <b>Time Limit:</b> 1s<br>
+            <b>Memory Limit:</b> ???
+        </div>
+    </div>
+    <form id="submitForm" action="/submit/{{ problem.id }}" method="post" style="padding: 4px;">
+        <input type="hidden" name="code" id="code_input" value="">
+        <input type="submit" value="Submit" class="btn btn-primary">
+    </form>
+</div>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/python");
+    document.querySelector("#submitForm").addEventListener("submit", function() {
+        document.querySelector("#code_input").value = editor.getValue();
+    });
+</script>
+{% endblock %}

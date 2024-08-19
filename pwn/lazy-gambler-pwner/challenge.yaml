@@ -1,0 +1,14 @@
+apiVersion: kctf.dev/v1
+kind: Challenge
+metadata:
+  name: lazy-gambler-pwner
+spec:
+  deployed: true
+  powDifficultySeconds: 0
+  network:
+    public: true
+  healthcheck:
+    # TIP: disable the healthcheck during development
+    enabled: true
+    image: us.gcr.io/idekctf-374221/lazy-gambler-pwner-healthcheck:bf6da740d1e2b1b5760639143e9c4ecf7b210c354562fc64f61b8aa120207de9
+  image: us.gcr.io/idekctf-374221/lazy-gambler-pwner-challenge:b149fb15993f26158092892ab5974aa1231a0353c198ab9f3e0641293533dbf3

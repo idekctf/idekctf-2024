@@ -1,0 +1,38 @@
+{
+	"easy": {
+		"bonaparte_1784": {"img": "tile_3_1_3.jpeg"},
+		"beer_park": {"img": "tile_3_1_3.jpeg"},
+		"mr_drains": {"img": "tile_3_1_3.jpeg"},
+		"green_car": {"img": "tile_3_1_3.jpeg"},
+		"posuto_py": {"img": "tile_3_1_3.jpeg"},
+		"icc": {"img": "tile_3_1_3.jpeg"},
+		"imax": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"all_eyes_on_us": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"panasonic": {"img": "tile_3_1_3.jpeg"},
+		"deja_vu": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52}
+	},
+	"medium": {
+		"soylent_green": {"img": "tile_3_1_3.jpeg"},
+		"and_my_compass": {"img": "tile_3_1_3.jpeg"},
+		"sea_adventure": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"beach_property": {"img": "tile_3_1_3.jpeg"},
+		"stairway_to_heaven": {"img": "tile_3_1_3.jpeg", "width": 68, "height": 34},
+		"a_circle": {"img": "tile_3_1_3.jpeg"},
+		"idek_islands": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"drunk_driving": {"img": "tile_3_1_3.jpeg"},
+		"wrong_side": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"pulled_over": {"img": "tile_3_1_3.jpeg"}
+	},
+	"hard": {
+		"mountains_of_madness": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"venice": {"img": "tile_3_1_3.jpeg"},
+		"happy_birthday": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52},
+		"traffic_cone": {"img": "tile_3_1_3.jpeg"},
+		"birb": {"img": "tile_3_1_3.jpeg"},
+		"nostalgia_of_the_inf": {"img": "tile_3_1_3.jpeg", "width": 114, "height": 56},
+		"at_a_crossroads": {"img": "tile_3_1_3.jpeg"},
+		"everyones_connected": {"img": "tile_3_1_3.jpeg"},
+		"rise_above": {"img": "tile_3_1_3.jpeg"},
+		"butterfly": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52}
+	}
+}
